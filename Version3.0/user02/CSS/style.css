@@ -24,6 +24,7 @@ th {
 	color: #ffffff;
 	background-color: #003366;
 }	background-color: #02f23e;
+	background-color: #02f23e;
 }
 ul {
 	list-style-image: url(https://media.wired.com/photos/5a0a38c1d07f6824ff44221b/master/w_2560%2Cc_limit/twitterlists-TA.jpg)
@@ -31,3 +32,7 @@ ul {
 ol {
     list-style-image: url(https://www.akc.org/wp-content/uploads/2016/06/Beagle-standing-in-a-frosty-field-on-a-cold-morning.jpg) 
 }
+p {   
+	padding: 20px 10px;  /* Vertical  Horizontal */
+	background-color: lavender; 
+	}
