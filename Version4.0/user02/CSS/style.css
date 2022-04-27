@@ -118,5 +118,10 @@ th {
   }
   *{
     text-align:right;
+    text-align: center;
     border: 2px solid black;
-}
+}}
+
+.nameplate	{
+	text-align: center;
+	}
