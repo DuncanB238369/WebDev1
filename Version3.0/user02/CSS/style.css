@@ -31,6 +31,7 @@ ul {
   }
 ol {
     list-style-image: url(https://www.akc.org/wp-content/uploads/2016/06/Beagle-standing-in-a-frosty-field-on-a-cold-morning.jpg) 
+    list-style-image: url(https://www.akc.org/wp-content/uploads/2016/06/Beagle-standing-in-a-frosty-field-on-a-cold-morning.jpg); style:"width:100px;height:100px;"
 }
 p {   
 	padding: 20px 10px;  /* Vertical  Horizontal */
