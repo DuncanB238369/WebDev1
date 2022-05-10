@@ -60,50 +60,76 @@
       </div>
     </nav>
   </div>
-  <table border="0" width="350" cellspacing="0" cellpadding="0">
-    <tr>
-      <td>
-        <img border="0" src="images/roulette.jpg" width="152" height="216" />
-      </td>
-      <td>
-        <form name="fire">
-          Load number of bullets (1-6):<br /><input
-            name="bullets"
-            type="text"
-            size="3"
-            value="1"
-          /><br />
+  <h1 align center>just a relaxing game</h1>
+  <script language="JavaScript">
+    // numberguess is by Lancer - written 4 Jan 1999
+    // lancer@kp.planet.gen.nz
 
-          <p>
-            <input
-              name="message"
-              type="button"
-              value="Play Roulette!"
-              onClick="fireit()"
-            />
-          </p>
-        </form>
+    var guessme = Math.round(Math.random() * 99 + 1);
+    var speech = "Guess my number (from 1 to 100)";
 
-        <script>
-          //Russian Roulette Game- by javascriptkit.com
-          //Visit JavaScript Kit (http://javascriptkit.com) for script
-          //Credit must stay intact for use
+    function process(mystery) {
+      var guess = document.forms.guessquiz.guess.value;
+      var speech = '"' + guess + '" does not make sense to me.';
+      document.forms.guessquiz.guess.value = "";
 
-          function fireit() {
-            var theone = Math.floor(Math.random() * 6);
+      if (guess == mystery) {
+        document.forms.guessquiz.prompt.value =
+          "Congratulations! " + mystery + " is correct!";
+        alert(
+          "Well done - the mystery number is " +
+            mystery +
+            "! \n\nPress this button to reload the page for another game."
+        );
+        speech = "";
+        document.location = document.location;
+      }
 
-            if (theone <= document.fire.bullets.value - 1) alert("Bang");
-            else {
-              document.fire.message.value = "Lucky Shot";
-              setTimeout("document.fire.message.value='Play Roulette'", 500);
-            }
-          }
-        </script>
-        <p align="center">
-          This free script provided by<br />
-          <a href="http://javascriptkit.com">JavaScript Kit</a>
-        </p>
-      </td>
-    </tr>
-  </table>
+      if (mystery < guess) {
+        speech = "Less than " + guess;
+      }
+
+      if (mystery > guess) {
+        speech = "Greater than " + guess;
+      }
+
+      if (guess == "") {
+        speech = "You didn't guess anything!";
+      }
+
+      document.forms.guessquiz.prompt.value = speech;
+      document.forms.guessquiz.guess.focus();
+    }
+
+    // end hide -->
+  </script>
+
+  <form onSubmit="" name="guessquiz">
+    <center>
+      <table align="CENTER" bgcolor="#888888" border="3" cellpadding="5">
+        <tr>
+          <td bgcolor="#004080">
+            <font color="#ffffff" face="Arial"
+              ><b>GUESS MY NUMBER (1 - 100)</b></font
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <center>
+              <input
+                type="text"
+                name="prompt"
+                size="31"
+                maxlength="40"
+                value="Guess my number (from 1 to 100)"
+              /><br />
+              <input type="text" name="guess" size="3" maxlength="3" value="" />
+              <input type="button" value="Guess" onClick="process(guessme)" />
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </form>
 </body>
