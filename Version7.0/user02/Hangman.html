@@ -15,10 +15,16 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <style>
+    body {
+    background-color:#9dff0083;
+  }
+  </style>
 </head>
 
 <body>
+  
+    
     <div class="menu">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
@@ -29,13 +35,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
               
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="TikTakToe.html" class="nav-item nav-link active">TikTacToe</a>
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="TikTakToe.html" class="nav-item nav-link">TikTacToe</a>
                     <a href="Hangman.html" class="nav-item nav-link active">Hangman</a>
-                    <a href="Roulette.html" class="nav-item nav-link active">Russian Roulette</a>
-                    <a href="Numbers.html" class="nav-item nav-link active">Guess the Number</a>
-                    <a href="Story.html" class="nav-item nav-link active">Story Creator</a>
-                    <a href="VudooHudoo.html" class="nav-item nav-link active">Magic</a>
+                    <a href="Roulette.html" class="nav-item nav-link">Russian Roulette</a>
+                    <a href="Numbers.html" class="nav-item nav-link">Guess the Number</a>
+                    <a href="Story.html" class="nav-item nav-link">Story Creator</a>
+                    <a href="VudooHudoo.html" class="nav-item nav-link">Magic</a>
                  
                 </div>
                 <div class="navbar-nav ml-auto">
@@ -44,7 +50,8 @@
             </div>
         </nav>
     </div>
-
+    <h1>Hangman</h1>
+    <center>
 <SCRIPT LANGUAGE="javascript">
 
     /*
@@ -226,4 +233,15 @@
     <p align="center"><font face="arial" size="-2">This free script provided by</font><br>
     <font face="arial, helvetica" size="-2"><a href="http://javascriptkit.com">JavaScript
     Kit</a></font></p>
+    <h3>Use This To Check Your Answer</h3>
+    <script>
+      function showMsg(){
+        var userInput = document.getElementById('userInput').value;
+        document.getElementById('userMsg').innerHTML = userInput;
+      }
+      </script>
+       <input type="input" max length="40" id="userInput" onkeyup="showMsg()" placeholder="Enter text here...">
+       <p id="userMsg"></p>
+  </center>
+    
 </body>
