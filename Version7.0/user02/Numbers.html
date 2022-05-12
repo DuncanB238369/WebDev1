@@ -26,6 +26,12 @@
     background-color:#9dff0083;
          }
   </style>
+
+  <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Guess half of the total from the smallest to the largest then continue doing that until you have the answer";
+    }
+    </script>
 </head>
 
 <body>
@@ -129,4 +135,11 @@
       </table>
     </center>
   </form>
+<center>
+<h4>
+<button onclick="myFunction()">Hint</button>
+</h4>
+<p id="demo"></p>
+</center>
+
 </body>

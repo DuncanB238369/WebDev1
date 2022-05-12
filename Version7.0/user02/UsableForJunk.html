@@ -1009,3 +1009,124 @@
             </div>
         </nav>
     </div>
+
+
+
+
+
+    <html>
+<head>
+
+
+
+
+<script>
+function preferedBrowser() {
+  prefer = document.forms[0].browsers.value;
+  alert("Good Choise. You Chose" + prefer);
+}
+</script>
+
+
+</head>
+<body>
+
+
+
+<form>
+Choose which browser you prefer:
+  <select id="browsers" onchange="preferedBrowser()">
+    <option value="Chrome">Chrome</option>
+    <option value="Internet Explorer">Internet Explorer</option>
+    <option value="Firefox">Firefox</option>
+  </select>
+</form>
+
+
+
+</body>
+</html>
+
+<html>
+<head>
+
+
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+
+
+</head>
+<body>
+
+
+
+
+<p>Click the button to trigger a function.</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>
+
+
+
+<html>
+<head>
+
+
+
+
+<script>
+function myFunction(x) {
+  x.style.background = "yellow";
+}
+</script>
+
+
+
+
+</head>
+<body>
+
+
+
+
+Enter your name: <input type="text" onfocus="myFunction(this)">
+
+<p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+
+
+
+</body>
+</html>
+
+<html>
+<head>
+
+
+
+<script>
+function myFunction() {
+  alert("Page is loaded");
+}
+</script>
+
+
+
+</head>
+
+<body onload="myFunction()">
+<h2>Hello World!</h2>
+</body>
+
+</html>
